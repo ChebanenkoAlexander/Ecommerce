@@ -1,11 +1,11 @@
 import React from 'react';
 import Header from '../components/Header/Header';
 import Footer from '../components/Footer/Footer';
-// import Sidebar from '../components/Sidebar';
-// import ProductCard from '../components/ProductCard';
+import Sidebar from '../components/Sidebar/Sidebar';
+import ProductCard from '../components/ProductCard/ProductCard';
 // import ProductSort from '../components/ProductSort';
 import { tvProducts } from '../data/products';
-// import './Home.css';
+import './Home.css';
 
 function Home() {
   // Получаем уникальные бренды для фильтра
@@ -15,11 +15,11 @@ function Home() {
     <div className="home">
         
       <Header />
-      {/* <main className="main-content">
+      <main className="main-content">
         <div className="content-container">
-          <Sidebar brands={brands} />
+          {/* <Sidebar brands={brands} /> */}
           <div className="products-area">
-            <ProductSort productCount={tvProducts.length} />
+            {/* <ProductSort productCount={tvProducts.length} /> */}
             
             <div className="products-grid">
               {tvProducts.map(product => (
@@ -28,7 +28,7 @@ function Home() {
             </div>
           </div>
         </div>
-      </main> */}
+      </main>
       
       <Footer />
     </div>
