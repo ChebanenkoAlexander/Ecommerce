@@ -19,8 +19,8 @@ function Sidebar({ brands }) {
             <div className="filter-section">
                 <h3>Price Range</h3>
                 <div className="price-inputs">
-                    <input type="number" placeholder="0" className="price-input" />
-                    <input type="number" placeholder="5000" className="price-input" />
+                    <input type="text" placeholder="0" className="price-input" />
+                    <input type="text" placeholder="5000" className="price-input" />
                 </div>
             </div>
             
