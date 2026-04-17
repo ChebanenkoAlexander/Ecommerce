@@ -91,22 +91,7 @@
 }
 
 
-.sidebar {
-  width: 100%;
-}
 
-@media (min-width: 640px) and (max-width: 1023px) {
-  .sidebar {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1rem;
-  }
-}
 
-@media (max-width: 639px) {
-  .sidebar {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-  }
-}
+
+
