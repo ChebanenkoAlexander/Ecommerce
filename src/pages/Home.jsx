@@ -1,6 +1,6 @@
 import React from 'react';
-import Header from '../components/Header';
-// import Footer from '../components/Footer';
+import Header from '../components/Header/Header';
+import Footer from '../components/Footer/Footer';
 // import Sidebar from '../components/Sidebar';
 // import ProductCard from '../components/ProductCard';
 // import ProductSort from '../components/ProductSort';
@@ -28,9 +28,9 @@ function Home() {
             </div>
           </div>
         </div>
-      </main>
+      </main> */}
       
-      <Footer /> */}
+      <Footer />
     </div>
   );
 }
