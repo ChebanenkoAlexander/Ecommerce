@@ -1,5 +1,6 @@
 .sidebar {
   background: #f8f9fa;
+  width: 256px;
   padding: 1.5rem;
   border-radius: 12px;
   height: fit-content;

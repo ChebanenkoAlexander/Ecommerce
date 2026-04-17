@@ -17,7 +17,7 @@ function Home() {
       <Header />
       <main className="main-content">
         <div className="content-container">
-          {/* <Sidebar brands={brands} /> */}
+          <Sidebar brands={brands} />
           <div className="products-area">
             {/* <ProductSort productCount={tvProducts.length} /> */}
             

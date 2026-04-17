@@ -34,12 +34,13 @@
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background: rgba(0, 0, 0, 0.5);
-  color: white;
+  background: #FFFFFFE5;
+  color: #0A0A0A;
   border: none;
   padding: 0.5rem 1rem;
   cursor: pointer;
   font-size: 1.2rem;
+  border-radius: 50%;
   opacity: 0;
   transition: opacity 0.3s;
   z-index: 1;
@@ -55,6 +56,7 @@
 
 .next-btn {
   right: 10px;
+  
 }
 
 .image-counter {
@@ -119,7 +121,7 @@
 .favorite-btn {
   font-size: 1.5rem;
   background: none;
-  border: 1px solid #ddd;
+  border: none;
   background: #ffffffe5;
   border-radius: 10px;
   cursor: pointer;
@@ -132,12 +134,14 @@
 }
 
 .favorite-btn.active {
-  border-color: #e74c3c;
+  background-color:#D4183D; 
+
+  z-index: 1;
 }
 .favorite-btn.active .favorite-btn__img {
-  filter: brightness(0) saturate(100%) invert(15%) sepia(95%) saturate(6932%)
-    hue-rotate(358deg) brightness(95%) contrast(112%);
+   filter: brightness(0) invert(1)
 }
+
 .add-to-cart-btn {
   flex: 1;
   background: #030213;
