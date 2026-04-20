@@ -81,6 +81,8 @@
 
   .header-icons {
     position: absolute;
+    top: 0;
+    right: 0;
   }
    .nav-categories{
     flex-wrap: wrap;
