@@ -1,10 +1,9 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import './ProductCard.css';
 
-function ProductCard({ product }) {
+function ProductCard({ product, cartQuantity = 0, addToCart, updateQuantity }) {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const [isFavorite, setIsFavorite] = useState(false);
-  const [cartQuantity, setCartQuantity] = useState(0);
   
   const hasMultipleImages = product.images.length > 1;
   
@@ -20,20 +19,21 @@ function ProductCard({ product }) {
     setIsFavorite(!isFavorite);
   };
   
-  const addToCart = () => {
-    setCartQuantity(1);
+const handleAddToCart = () => {
+    console.log('🖱️ Клик по кнопке, product.id:', product.id);
+    if (typeof addToCart === 'function') {
+      addToCart(product.id);
+    } else {
+      console.error('❌ addToCart - НЕ ФУНКЦИЯ!', addToCart);
+    }
   };
   
   const incrementCart = () => {
-    setCartQuantity(prev => prev + 1);
+    updateQuantity(product.id, cartQuantity + 1);
   };
   
   const decrementCart = () => {
-    if (cartQuantity === 1) {
-      setCartQuantity(0);
-    } else {
-      setCartQuantity(prev => prev - 1);
-    }
+    updateQuantity(product.id, cartQuantity - 1);
   };
   
   return (
@@ -76,7 +76,7 @@ function ProductCard({ product }) {
           </button>
           
           {cartQuantity === 0 ? (
-            <button className="add-to-cart-btn" onClick={addToCart}>
+            <button className="add-to-cart-btn" onClick={handleAddToCart}>
               Add to Cart
             </button>
           ) : (

@@ -62,6 +62,7 @@
   padding: 0.5rem;
   border-radius: 50%;
   transition: background 0.3s;
+  position: relative;
 }
 
 .icon-btn:hover {
@@ -74,7 +75,22 @@
 .cart-icon{
   padding: 0 15px;
 }
-
+.cart-badge {
+  position: absolute;
+  top: 6px;
+  right: 1px;
+  background: #030213;
+  color: white;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 4px;
+  font-size: 12px;
+  font-weight: 500;
+}
 
 
 @media (max-width: 639px) {
